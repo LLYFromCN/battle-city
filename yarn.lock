@@ -3462,7 +3462,13 @@ react-redux@^5.0.3:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react@^15.3.2:
+react-svg-canvas@shinima/react-svg-canvas:
+  version "0.0.1-alpha"
+  resolved "https://codeload.github.com/shinima/react-svg-canvas/tar.gz/ef5fa012db0b0a35d7e99902b6fd460f11766e49"
+  dependencies:
+    react "^15.6.1"
+
+react@^15.3.2, react@^15.6.1:
   version "15.6.1"
   resolved "http://registry.npm.taobao.org/react/download/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:

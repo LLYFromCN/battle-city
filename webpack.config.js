@@ -85,7 +85,10 @@ module.exports = {
             transpileOnly: true,
           },
         }],
-        exclude: /node_modules/,
+        include: [
+          path.resolve(__dirname, 'app'),
+          /react-svg-canvas/,
+        ],
       },
     ].concat(isProduction ? [
       {

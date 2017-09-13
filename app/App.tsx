@@ -9,6 +9,7 @@ import PauseIndicator from 'components/PauseIndicator'
 import CurtainsContainer from 'components/CurtainsContainer'
 import Inspector from 'components/Inspector'
 import { State } from 'types'
+import { Svg } from 'react-svg-canvas/src'
 
 declare global {
   const COMPILE_VERSION: string
@@ -43,7 +44,7 @@ class App extends React.PureComponent<{ scene: Scene, paused: boolean }> {
 
     return (
       <div style={{ display: 'flex' }}>
-        <svg
+        <Svg
           className="svg"
           style={{ background: '#757575' }}
           width={totalWidth * zoomLevel}
@@ -56,7 +57,7 @@ class App extends React.PureComponent<{ scene: Scene, paused: boolean }> {
           {scene === 'statistics' ? <StatisticsScene /> : null}
           <CurtainsContainer />
           {paused ? <PauseIndicator /> : null}
-        </svg>
+        </Svg>
         {process.env.NODE_ENV !== 'production' ? <Inspector /> : null}
         {process.env.NODE_ENV === 'production' ? <HelpInfo /> : null}
       </div>
