@@ -34,6 +34,16 @@ type P = {
   y: number,
 }
 export default class Snow extends React.PureComponent<P, {}> {
+  static offScreen = {
+    width: 16,
+    height: 16,
+    initProps: { x: 0, y: 0 },
+    render(ctx: CanvasRenderingContext2D, offScreenCanvas: HTMLCanvasElement) {
+      const { x, y } = this.props
+      ctx.drawImage(offScreenCanvas, x, y)
+    },
+  }
+
   render() {
     const { x, y } = this.props
     return (
